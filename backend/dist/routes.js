@@ -13,6 +13,11 @@ exports.Routes = [{
         controller: PostController_1.PostController,
         action: "one"
     }, {
+        method: "put",
+        route: "/posts/:id",
+        controller: PostController_1.PostController,
+        action: "update"
+    }, {
         method: "post",
         route: "/posts",
         controller: PostController_1.PostController,

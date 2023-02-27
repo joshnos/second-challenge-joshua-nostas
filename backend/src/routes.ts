@@ -11,6 +11,11 @@ export const Routes = [{
     controller: PostController,
     action: "one"
 }, {
+    method: "put",
+    route: "/posts/:id",
+    controller: PostController,
+    action: "update"
+},{
     method: "post",
     route: "/posts",
     controller: PostController,

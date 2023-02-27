@@ -30,6 +30,16 @@ class PostController {
         });
         return this.postRepository.save(post);
     }
+    async update(request, response, next) {
+        const { name, description } = request.body;
+        const id = request.params.id;
+        const post = await this.postRepository.findOne({
+            where: { id }
+        });
+        post.name = name !== null && name !== void 0 ? name : post.name;
+        post.description = description !== null && description !== void 0 ? description : post.description;
+        return this.postRepository.save(post);
+    }
     async remove(request, response, next) {
         const id = request.params.id;
         let postToRemove = await this.postRepository.findOneBy({ id });
