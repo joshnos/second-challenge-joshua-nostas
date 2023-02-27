@@ -24,14 +24,14 @@ function PostsList() {
   return (
     <div className="w-4/6">
       <header className="flex justify-between items-center py-4">
-        <h1>Posts ({posts.length})</h1>
+        <h1>Posts ({filteredPosts.length})</h1>
 
         <input
           type="text"
           name="filter"
           onChange={changeSearchTerm}
-          className="p-2 rounded-md bg-zinc-200 mb-2"
-          placeholder="Write a name"
+          className="p-2 rounded-md bg-zinc-200 mb-2 w-3/6"
+          placeholder="Write a name to filter the list"
           autoFocus
         />
 

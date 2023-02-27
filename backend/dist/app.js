@@ -8,6 +8,9 @@ const cors_1 = __importDefault(require("cors"));
 const express_1 = __importDefault(require("express"));
 const routes_1 = require("./routes");
 const data_source_1 = require("./utils/data-source");
+const dotenv_1 = __importDefault(require("dotenv"));
+const path_1 = __importDefault(require("path"));
+dotenv_1.default.config({ path: path_1.default.resolve(__dirname, '../env/.env') });
 data_source_1.AppDataSource.initialize().then(async () => {
     // create express app
     const app = (0, express_1.default)();
@@ -26,7 +29,7 @@ data_source_1.AppDataSource.initialize().then(async () => {
         });
     });
     // start express server
-    app.listen(3000);
-    console.log("Express server has started on port 3000. Open http://localhost:3000/posts to see results");
+    app.listen(3001);
+    console.log("Express server has started on port 3001. Open http://localhost:3001/posts to see results");
 }).catch(error => console.log(error));
 //# sourceMappingURL=app.js.map

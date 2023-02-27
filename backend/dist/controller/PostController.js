@@ -51,4 +51,4 @@ class PostController {
     }
 }
 exports.PostController = PostController;
-//# sourceMappingURL=PostController.js.map
+//# sourceMappingURL=postController.js.map

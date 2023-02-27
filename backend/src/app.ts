@@ -3,6 +3,9 @@ import cors from 'cors';
 import express, {Request, Response} from 'express';
 import { Routes } from './routes';
 import { AppDataSource } from './utils/data-source';
+import dotenv from 'dotenv';
+import path from 'path';
+dotenv.config({ path: path.resolve(__dirname, '../env/.env') });
 
 AppDataSource.initialize().then(async () => {
 
@@ -25,8 +28,8 @@ AppDataSource.initialize().then(async () => {
   });
 
   // start express server
-  app.listen(3000)
+  app.listen(3001)
 
-  console.log("Express server has started on port 3000. Open http://localhost:3000/posts to see results")
+  console.log("Express server has started on port 3001. Open http://0.0.0.0:3001/posts to see results")
 
 }).catch(error => console.log(error))
