@@ -41,14 +41,14 @@ function PostForm() {
   }, [params, posts]);
 
   return (
-    <form onSubmit={handleSubmit} className="bg-zinc-800 max-w-sm p-4">
+    <form onSubmit={handleSubmit} className="bg-zinc-100 max-w-sm p-4">
       <label className="block text-sm font-bold">Post:</label>
       <input
         type="text"
         name="name"
         onChange={handleChange}
         value={post.name}
-        className="w-full p-2 rounded-md bg-zinc-600 mb-2"
+        className="w-full p-2 rounded-md bg-zinc-200 mb-2"
         placeholder="Write a name"
         autoFocus
       />
@@ -59,11 +59,11 @@ function PostForm() {
           name="description"
           onChange={handleChange}
           value={post.description}
-          className="w-full p-2 rounded-md bg-zinc-600 mb-2"
+          className="w-full p-2 rounded-md bg-zinc-200 mb-2"
           placeholder="Write a description"
         />
       </label>
-      <button type="submit" className="bg-indigo-600 px-2 py-1">Submit</button>
+      <button type="submit" className="bg-green-600 px-2 py-1 text-white rounded">Save</button>
     </form>
   );
 }
